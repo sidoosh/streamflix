@@ -1,0 +1,17 @@
+.home-container {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  /* border-image: linear-gradient(rgb(37, 84, 112), rgb(3, 195, 195), 30);
+  border-width: 3rem;
+  border-style: solid; */
+
+}
+
+.home-header {
+  display: flex;
+  justify-content: space-around;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.page-container {}

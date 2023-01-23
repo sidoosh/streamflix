@@ -1,0 +1,13 @@
+body {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  max-width: 100vw;
+  font-size: .75rem;
+  /* overflow-x: hidden; */
+}
+
+code {
+  font-family: 'Open Sans', sans-serif;
+}
