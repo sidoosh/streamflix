@@ -1,10 +1,9 @@
 .home-container {
   display: grid;
-  grid-template-columns: repeat(2, auto);
-  /* border-image: linear-gradient(rgb(37, 84, 112), rgb(3, 195, 195), 30);
-  border-width: 3rem;
-  border-style: solid; */
-
+  grid-template-columns: 85% 15%;
+  padding: 3rem;
+  background: radial-gradient(circle at 10% 20%, rgb(0, 93, 133) 0%, rgb(0, 181, 149) 90%);
+  color: #ffffff
 }
 
 .home-header {
@@ -14,4 +13,8 @@
   font-weight: bold;
 }
 
-.page-container {}
+/* This will be moved for them changes */
+.page-container {
+  border-radius: 2px;
+  border: 1px solid;
+}

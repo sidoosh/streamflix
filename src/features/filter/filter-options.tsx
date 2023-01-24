@@ -3,6 +3,7 @@ import ReactStars from "react-rating-stars-component";
 import React, { useMemo } from "react";
 import { Type, startYear } from "../../utlis/constants";
 import "./filter-options.css";
+import { useThemeUpdate } from "../../context/ThemeContext";
 
 interface FilterProps {
   genres: Array<{
@@ -88,6 +89,9 @@ const Filters: React.FC<FilterProps> = (props: FilterProps) => {
           value={props.filters.rating}
           size={24}
         />
+      </div>
+      <div>
+        <button onClick={useThemeUpdate}>Toggle Theme</button>
       </div>
     </div>
   );

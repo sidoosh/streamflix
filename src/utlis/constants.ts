@@ -22,4 +22,9 @@ export const TRENDING_PATH = "trending";
 export const TRENDING_TIME_WINDOW = "week";
 export const NEWEST_PATH_MOVIE = "upcoming";
 export const NEWEST_PATH_TV = "airing_today";
-export const SEARCH_PATH = "search"
+export const SEARCH_PATH = "search";
+
+export const darkThemeBackGroundColor = "#232b2b";
+export const lightThemeBackGroundColor = "#232b2b";
+export const darkThemeBorderColor = "#232b2b";
+export const lightThemeBorderColor = "#232b2b";

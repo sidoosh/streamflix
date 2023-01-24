@@ -7,18 +7,22 @@ import { queryClient } from "./api/query-client";
 import { BrowserRouter } from "react-router-dom";
 import "./styles/index.css";
 import Home from "./pages/home";
+import { ThemeProvider } from "./context/ThemeContext";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
-      <QueryClientProvider client={queryClient}>
-        <Home />
-        <ReactQueryDevtools initialIsOpen={false} />
-      </QueryClientProvider>
-    </BrowserRouter>
+    <ThemeProvider>
+      <BrowserRouter>
+        <QueryClientProvider client={queryClient}>
+          <Home />
+
+          <ReactQueryDevtools initialIsOpen={false} />
+        </QueryClientProvider>
+      </BrowserRouter>
+    </ThemeProvider>
   </React.StrictMode>
 );
 

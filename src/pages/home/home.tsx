@@ -6,6 +6,11 @@ import PageGrid from "../../features/layout/page-container";
 import Filters from "../../features/filter/filter-options";
 import { getGenreList } from "../../api/genre-list";
 import Search from "../../features/search/search";
+import { useTheme } from "../../context/ThemeContext";
+import {
+  darkThemeBackGroundColor,
+  lightThemeBackGroundColor,
+} from "../../utlis/constants";
 const currentYear = new Date().getFullYear();
 
 const Home: React.FC = () => {
@@ -18,6 +23,15 @@ const Home: React.FC = () => {
     rating: 4,
   });
   const [searchTerm, setSearchTerm] = useState("");
+  const darkTheme = useTheme();
+  const themeStyles = {
+    backgroundColor: darkTheme
+      ? darkThemeBackGroundColor
+      : lightThemeBackGroundColor,
+    borderColor: darkTheme
+      ? darkThemeBackGroundColor
+      : lightThemeBackGroundColor,
+  };
 
   const handleSearchTermChange = (event: {
     target: { value: React.SetStateAction<string> };
@@ -64,7 +78,7 @@ const Home: React.FC = () => {
   }
   return (
     <div className="home-container">
-      <main className="page-container">
+      <main className="page-container" style={themeStyles}>
         <header className="home-header">
           <h3>Discover</h3>
           <MenuItems handleClick={handleMenuSelection} />
@@ -80,7 +94,7 @@ const Home: React.FC = () => {
           searchTerm={searchTerm}
         />
       </main>
-      <section>
+      <section className="" style={themeStyles}>
         <Filters
           genres={genreList.genres}
           onFilterChange={handleFilterChange}
